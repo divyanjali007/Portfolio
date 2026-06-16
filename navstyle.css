@@ -172,31 +172,55 @@ h2 {
 #home {
     text-align: center;
 }
+/* --- HAMBURGER MENU CSS --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    padding: 15px 10px;
-    gap: 15px;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 15px 20px;
+    position: relative;
+  }
+
+  .hamburger {
+    display: flex; 
   }
 
   .nav-links {
-    display: flex !important;
+    display: none; 
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #1a1a2e;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 12px;
-  }
-  
-  .nav-links a {
-    width: 100%;
     text-align: center;
+    padding: 20px 0;
+    gap: 20px;
+    z-index: 100;
+  }
+
+  .nav-links.active {
+    display: flex !important;
+  }
+
+  .nav-links a {
     padding: 10px 0;
-    border-bottom: 1px solid #333;
     color: white;
     text-decoration: none;
-  }
-  
-  .nav-links a:last-child {
-    border-bottom: none;
   }
 }
