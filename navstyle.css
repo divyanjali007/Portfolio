@@ -187,3 +187,32 @@ h2 {
 #home {
     text-align: center;
 }
+/* Mobile Responsive Navbar */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  nav h1 {
+    margin-bottom: 10px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    text-align: center;
+    padding: 0;
+  }
+  
+  nav ul li {
+    width: 100%;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+  }
+  
+  nav ul li:last-child {
+    border-bottom: none;
+  }
+}
